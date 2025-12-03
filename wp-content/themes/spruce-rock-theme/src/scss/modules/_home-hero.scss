@@ -1,6 +1,177 @@
 @use "abstracts" as *;
+:root{
+    --homeHero-height: max(880px);
+}
 @mixin home-hero{
     .home-hero{
-        
+        background: $color-900;
+        min-height: var(--homeHero-height);
+        color: white;
+        &__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            min-height: var(--homeHero-height);
+            position: relative;
+            overflow: visible;
+            z-index: 1;
+            &::after{
+                content: "";
+                background-image: url('data:image/svg+xml;utf8,<svg width="59" height="233" viewBox="0 0 59 233" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M58.2842 29.2003L53.2092 24.0346L32.909 44.3348V40.0754L51.0342 21.9502L45.9591 16.7845L32.909 29.8347V25.5752L43.7841 14.7001L38.7091 9.53447L32.909 15.3345V0.200012H25.659V15.3345L19.8589 9.53447L14.7839 14.7001L25.659 25.5752V29.8347L12.6088 16.7845L7.53379 21.9502L25.659 40.0754V44.3348L5.35877 24.0346L0.283721 29.2003L29.284 58.2005L58.2842 29.2003Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2842 145.201L53.2092 140.036L32.909 160.336V156.076L51.0342 137.951L45.9591 132.786L32.909 145.836V141.576L43.7841 130.701L38.7091 125.536L32.909 131.336V116.201H25.659V131.336L19.8589 125.536L14.7839 130.701L25.659 141.576V145.836L12.6088 132.786L7.53379 137.951L25.659 156.076V160.336L5.35877 140.036L0.283721 145.201L29.284 174.202L58.2842 145.201Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2821 87.1987L53.2071 92.3644L32.9069 72.0642V76.3236L51.0321 94.4487L45.957 99.6144L32.9069 86.5643V90.8237L43.782 101.699L38.7069 106.864L32.9069 101.064V116.199H25.6568V101.064L19.8568 106.864L14.7817 101.699L25.6568 90.8237V86.5643L12.6067 99.6144L7.53166 94.4487L25.6568 76.3236V72.0642L5.35664 92.3644L0.281597 87.1987L29.2819 58.1984L58.2821 87.1987Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2821 203.2L53.2071 208.365L32.9069 188.065V192.325L51.0321 210.45L45.957 215.615L32.9069 202.565V206.825L43.782 217.7L38.7069 222.866L32.9069 217.065V232.2H25.6568V217.065L19.8568 222.866L14.7817 217.7L25.6568 206.825V202.565L12.6067 215.615L7.53166 210.45L25.6568 192.325V188.065L5.35664 208.365L0.281597 203.2L29.2819 174.199L58.2821 203.2Z" stroke="%23323851" stroke-width="0.4"/></svg>');
+                position: absolute;
+                bottom: 0;
+                left: -80px; /* 🔥 se mueve 120px hacia fuera del contenedor */
+                width: 59px;
+                height: 464px;
+                background-repeat: repeat-y; /* 🔥 subir repetido verticalmente */
+                z-index: -1;
+            }
+            &::before{
+                content: "";
+                background-image: url('data:image/svg+xml;utf8,<svg width="59" height="233" viewBox="0 0 59 233" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M58.2842 29.2003L53.2092 24.0346L32.909 44.3348V40.0754L51.0342 21.9502L45.9591 16.7845L32.909 29.8347V25.5752L43.7841 14.7001L38.7091 9.53447L32.909 15.3345V0.200012H25.659V15.3345L19.8589 9.53447L14.7839 14.7001L25.659 25.5752V29.8347L12.6088 16.7845L7.53379 21.9502L25.659 40.0754V44.3348L5.35877 24.0346L0.283721 29.2003L29.284 58.2005L58.2842 29.2003Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2842 145.201L53.2092 140.036L32.909 160.336V156.076L51.0342 137.951L45.9591 132.786L32.909 145.836V141.576L43.7841 130.701L38.7091 125.536L32.909 131.336V116.201H25.659V131.336L19.8589 125.536L14.7839 130.701L25.659 141.576V145.836L12.6088 132.786L7.53379 137.951L25.659 156.076V160.336L5.35877 140.036L0.283721 145.201L29.284 174.202L58.2842 145.201Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2821 87.1987L53.2071 92.3644L32.9069 72.0642V76.3236L51.0321 94.4487L45.957 99.6144L32.9069 86.5643V90.8237L43.782 101.699L38.7069 106.864L32.9069 101.064V116.199H25.6568V101.064L19.8568 106.864L14.7817 101.699L25.6568 90.8237V86.5643L12.6067 99.6144L7.53166 94.4487L25.6568 76.3236V72.0642L5.35664 92.3644L0.281597 87.1987L29.2819 58.1984L58.2821 87.1987Z" stroke="%23323851" stroke-width="0.4"/><path d="M58.2821 203.2L53.2071 208.365L32.9069 188.065V192.325L51.0321 210.45L45.957 215.615L32.9069 202.565V206.825L43.782 217.7L38.7069 222.866L32.9069 217.065V232.2H25.6568V217.065L19.8568 222.866L14.7817 217.7L25.6568 206.825V202.565L12.6067 215.615L7.53166 210.45L25.6568 192.325V188.065L5.35664 208.365L0.281597 203.2L29.2819 174.199L58.2821 203.2Z" stroke="%23323851" stroke-width="0.4"/></svg>');
+                position: absolute;
+                bottom: 28px;
+                left: -21px; /* 🔥 se mueve 120px hacia fuera del contenedor */
+                width: 59px;
+                height: 406px;
+                background-repeat: repeat-y; /* 🔥 subir repetido verticalmente */
+                z-index: -1;
+            }
+            &-left{
+                align-items: center;
+                justify-content: center;
+                order: 0;
+                &-eyebrow{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    &::after{
+                        content: "";
+                        flex-grow: 1;
+                        height: 1px;
+                        background: $color-yellow;
+                        display: block;
+                    }
+                }
+                &-body{   
+                    padding: 40px;
+                    width: 100%;
+                    min-height: 300px;
+                    background: $color-pastel-teal; /* el fondo que tú quieras */
+                    clip-path: polygon(
+                        24px 0,       /* esquina superior izquierda recortada */
+                        100% 0,
+                        100% calc(100% - 24px), /* esquina inferior derecha recortada */
+                        calc(100% - 24px) 100%,
+                        0 100%,
+                        0 24px        /* parte del recorte arriba */
+                    );
+                }
+                &-link{
+                    .btn-menu{
+                        background-color: $color-green;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        display: flex;
+                        padding: 4px 4px 4px 16px;
+                        border-radius: 999px;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 16px;
+                        transition: border-radius 0.3s ease;
+                        &::after{
+                            content: "";
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;             // círculo
+                            background-color: $color-yellow;        // color de fondo del círculo (cámbialo)
+                            display: flex;                  // centrar el ícono
+                            align-items: center;
+                            justify-content: center;
+
+                            /* SVG como icono */
+                            background-image: url("data:image/svg+xml;utf8,<svg width='13' height='13' viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg'><path d='M10.1058 6.875H0V5.625H10.1058L5.35896 0.878125L6.25 0L12.5 6.25L6.25 12.5L5.35896 11.6219L10.1058 6.875Z' fill='%23141A33'/></svg>");
+                            background-repeat: no-repeat;
+                            background-size: 13px 13px;     // tamaño del SVG
+                            background-position: center;
+                        }
+                    }  
+                }
+            }
+            &-right{
+                position: relative;
+                height: 100%;
+                order: 1;
+                &-main-image{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: calc(100vw - 120%);  /* desde mitad de la pantalla hasta el borde derecho */
+                    height: 100%;
+                    object-fit: cover;        /* mantiene proporción */
+                    object-position: center;  /* centrada */
+                    aspect-ratio: 3 / 2;      /* relación 3:2 */
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1512px){
+        .home-hero__content{
+            &::after{       
+                left: -4.654%;                
+            }
+            &::before{   
+                left: calc(-4.654% + 59px);                            
+            }
+        }
+    }
+    @media screen and (max-width: 1135px){
+        .home-hero__content{
+            gap: 2dvw;
+            &-left{
+                &-eyebrow{
+                    font-size: 32px;
+                }
+                &-title{
+                    font-size: 110px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1015px){
+        .home-hero__content-left{
+            &-title{
+                font-size: 80px;
+            }
+        }
+    }
+     @media screen and (max-width: 750px){
+        .home-hero__content{
+            gap: 40px;
+            grid-template-columns: 1fr;
+            padding-bottom: 42px;
+            &-left{
+                order: 1;
+                gap:40px;                
+            }
+            &-right{
+                order: 0;
+                min-height: 469px;
+                &-main-image{
+                    position: static !important;     /* quita posicionamiento */
+                    width: 100% !important;          /* ocupa todo el contenedor */
+                    height: 100% !important;         /* para que no se deforme */
+                    transform: none !important;      /* resetea el translate */
+                    object-fit: cover;
+                    object-position: center;
+                    aspect-ratio: 3 / 2;      /* relación 3:2 */
+                }
+            }
+        }
     }
 }

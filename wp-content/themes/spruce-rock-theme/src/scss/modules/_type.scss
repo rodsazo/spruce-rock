@@ -21,7 +21,6 @@
   .t-large{ @include t-large }
   .t-small{ @include t-small }
 
-  .t-16-b{ @include t-16-b }
   .t-16{ @include t-16 }
   .t-18{ @include t-18 }
   .t-24{ @include t-24 }
@@ -61,6 +60,7 @@
   }
 
   .c-900{ color: $color-900; }
+  .c-800{ color: $color-800; }
   .c-100{ color: $color-100;}
   .c-50{ color: $color-50;}
   .c-purple{ color: $color-purple;}

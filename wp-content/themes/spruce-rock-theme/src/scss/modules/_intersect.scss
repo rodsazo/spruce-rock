@@ -1,0 +1,48 @@
+@use "abstracts" as *;
+
+@at-root :root{
+  --intersectDelay: 0s;
+}
+
+@mixin intersect($is-gutenberg){
+
+  @if not( $is-gutenberg ) {
+    .intersect{
+
+      animation-delay: var(--intersectDelay);
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+      animation-timing-function: ease-out;
+
+      &.intersected{
+        animation-play-state: running;
+      }
+
+    }
+  }
+
+
+  .fadeInTop{ animation-name: fadeInTop; }
+  .fadeIn{ animation-name: fadeIn; }
+}
+
+@keyframes fadeInTop {
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

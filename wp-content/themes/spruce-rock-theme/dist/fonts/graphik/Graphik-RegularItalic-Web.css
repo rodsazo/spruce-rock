@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-RegularItalic-Web.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	}
+
+.Graphik-RegularItalic-Web {
+	font-family: 'Graphik Web';
+	font-weight: 400;
+	font-style: italic;
+	}

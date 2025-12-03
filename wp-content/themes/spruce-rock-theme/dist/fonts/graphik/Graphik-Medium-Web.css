@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-Medium-Web.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	}
+
+.Graphik-Medium-Web {
+	font-family: 'Graphik Web';
+	font-weight: 500;
+	font-style: normal;
+	}

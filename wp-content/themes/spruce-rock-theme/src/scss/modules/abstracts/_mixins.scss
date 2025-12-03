@@ -1,0 +1,145 @@
+$small-fonts-breakpoint : 768px;
+
+@mixin f_graphik{
+  font-family: 'Graphik XXCond';
+}
+
+@mixin t-caption{
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  --t-trim-size-t: -0.15em;
+  --t-trim-size-b: -0.13em;
+}
+
+@mixin t-large{
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  --t-trim-size-t: -0.05em;
+  --t-trim-size-b: -0.18em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 18px;
+  }
+}
+@mixin t-small{
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0;
+  --t-trim-size-t: -0.05em;
+  --t-trim-size-b: -0.18em;
+}
+
+@mixin t-16-b{
+  font-size: 16px;
+  line-height: 1;
+  --t-trim-size-t: -0.4em;
+  --t-trim-size-b: -0.39em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 16px;
+  }
+}
+
+@mixin t-16{
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  --t-trim-size-t: -0.4em;
+  --t-trim-size-b: -0.39em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 16px;
+  }
+}
+
+@mixin t-18{
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  --t-trim-size-t: -0.4em;
+  --t-trim-size-b: -0.39em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 18px;
+  }
+}
+
+@mixin t-24{
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  --t-trim-size-t: -0.39em;
+  --t-trim-size-b: -0.39em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 24px;
+  }
+}
+
+@mixin t-32{
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  --t-trim-size-t: -0.39em;
+  --t-trim-size-b: -0.385em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 32px;
+  }
+}
+
+@mixin t-40{
+  @include f_graphik;
+  font-size: 40px;
+  line-height: 0.8;
+  --t-trim-size-t: -0.065em;
+  --t-trim-size-b: -0.01em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 40px;
+  }
+}
+
+@mixin t-80{
+  @include f_graphik;
+  font-size: 80px;
+  line-height: 0.8;
+  letter-spacing: -0.01em;
+  --t-trim-size-t: -0.075em;
+  --t-trim-size-b: -0.005em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 80px;
+  }
+}
+
+@mixin t-96{
+  @include f_graphik;
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  --t-trim-size-t: -0.125em;
+  --t-trim-size-b: -0.056em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 96px;
+  }
+}
+
+@mixin t-112{
+  @include f_graphik;
+  font-size: 112px;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  --t-trim-size-t: -0.077em;
+  --t-trim-size-b: -0.007em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 112px;
+  }
+}
+
+@mixin t-124{
+  @include f_graphik;
+  font-size: 124px;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  --t-trim-size-t: -0.126em;
+  --t-trim-size-b: -0.055em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 72px;
+  }
+}

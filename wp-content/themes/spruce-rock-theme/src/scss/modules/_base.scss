@@ -1,0 +1,32 @@
+@use "abstracts" as *;
+
+@mixin body_styles{
+  &{
+    font-family: 'Graphik Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-x: hidden;
+    color: $color-900;
+    letter-spacing: -0.02em;
+    font-feature-settings: 'ss01' on;
+  }
+}
+
+@mixin base( $is_gutenberg: false ) {
+
+  @if( $is_gutenberg ) {
+    @include body_styles;
+  } @else {
+    @at-root html{
+      scroll-behavior: smooth;
+      scroll-margin: 80px;
+    }
+    body{
+      @include body_styles;
+    }
+    body.no-scroll{
+      overflow: hidden;
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+@use 'abstracts' as *;
+
+@mixin gcBlock{
+  .gcBlock{
+    overflow: hidden;
+    &--bg-gray{
+      background: $color-50;
+    }
+    &--bg-white{
+      background: white;
+    }
+    &--layout-centered{
+      --container-max-width: 772px;
+    }
+  }
+  .border-top{
+    border-top: 1px solid $color-100;
+  }
+  .border-bottom{
+    border-bottom: 1px solid $color-100;
+  }
+}

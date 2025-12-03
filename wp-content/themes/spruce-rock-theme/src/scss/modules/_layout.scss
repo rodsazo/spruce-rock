@@ -1,0 +1,22 @@
+:root{
+  --container-max-width: 1352px;
+}
+@mixin layout{
+  .container{
+    max-width: var(--container-max-width);
+    margin: auto;
+    padding-left: 4.654%;
+    padding-right: 4.654%;
+    box-sizing: content-box;
+
+    &--772{
+      --container-max-width: 772px;
+    }
+    &--886{
+      --container-max-width: 886px;
+    }
+    &--1120{
+      --container-max-width: 1120px;
+    }
+  }
+}

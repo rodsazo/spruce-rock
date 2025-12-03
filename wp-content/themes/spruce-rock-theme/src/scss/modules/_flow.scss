@@ -1,0 +1,25 @@
+@use "abstracts" as *;
+
+:root{
+  --flow-gap: 40px;
+  --flow-gap-156: 156px;
+  --flow-gap-80: 80px;
+  --flow-gap-64: 64px;
+  --flow-gap-29: 29px;
+  --flow-gap-24: 24px;
+  --flow-gap-16: 16px;
+}
+
+@mixin flow{
+  .flow{
+    display: flex;
+    flex-direction: column;
+    gap: var(--flow-gap);
+    &--156{ gap: var(--flow-gap-156); }
+    &--80{ gap: var(--flow-gap-80); }
+    &--64{ gap: var(--flow-gap-64); }
+    &--29{ gap: var(--flow-gap-29); }
+    &--24{ gap: var(--flow-gap-24); }
+    &--16{ gap: var(--flow-gap-16); }
+  }
+}

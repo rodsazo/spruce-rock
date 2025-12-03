@@ -1,0 +1,152 @@
+@use "abstracts" as *;
+:root{
+  --wysiwyg-ul-space: 8px;
+}
+@mixin wysiwyg {
+  .wysiwyg{
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+
+    &--large{
+      font-size: 20px;
+      @media screen and (max-width: 768px){
+        font-size: 16px;
+      }
+    }
+
+    &--tight-ul{
+      --wysiwyg-ul-space: 0;
+    }
+
+    &--small{
+      font-size: 12px;
+    }
+
+    h2{
+      font-weight: 600;
+      color: $color-900;
+      @include t_32;
+    }
+
+    h3{
+      font-weight: 600;
+      color: $color-900;
+      @include t_24;
+    }
+
+    h4{
+      font-weight: 600;
+      color: $color-900;
+      @include t_18;
+    }
+
+    p, h2, h3, h4, ul, ol {
+      margin: var(--t-trim-size) 0;
+    }
+
+    hr{
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, currentColor 20%, transparent 0%);
+      background-position: bottom left; /* or top, left, right */
+      background-size: 5px 1px; /* First value: dot width + space, Second value: dot height */
+      background-repeat: repeat-x; /* or repeat-y */
+      border: none;
+    }
+
+
+    :is(p,h2,h3,h4,ul,ol){
+      padding: 0.5em 0 0.125em;
+      :first-child{
+        padding-top: 0 !important;
+      }
+    }
+    [style*="text-decoration: underline"] {
+      text-underline-offset: 3px;     /* Distancia del subrayado */
+    }
+    a{
+      font-weight: 700;
+      background-image: linear-gradient(to right, $color-100);
+      background-size: 100% 2px;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+
+      &:hover{
+        color: black;
+      }
+    }
+
+    strong,b{
+      font-weight: 600;
+      color: $color-900;
+    }
+
+    em,i{
+      font-style: italic;
+    }
+
+    ol ,ul{
+      list-style: decimal;        /* Números por defecto */
+      counter-reset: custom-counter; /* Si quieres numeración personalizada */
+      padding: 4px 0 4px 1.5em;
+
+      li + li {
+        margin-top: var(--wysiwyg-ul-space);
+      }
+    }
+    ul {
+      list-style: disc;       /* bolitas sólidas */
+    }
+
+    blockquote{
+      margin: 24px 0;
+      background: $color-gray;
+      padding: 40px;
+      border-radius: 16px;
+      @include f_graphik;
+
+      &:first-child{
+        margin-top: 0;
+      }
+
+      @media screen and (max-width: 600px){
+        padding: 40px 20px;
+      }
+    }
+
+    /*
+    Images
+     */
+
+    [class*="wp-image-"] {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .wp-caption{
+      width: auto !important;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .wp-caption-text{
+        @include f_graphik;
+        font-size: 16px;
+        color: $color-900;
+        margin: var(--t-trim-size) 0;
+      }
+    }
+
+    .alignright{
+      margin-left: auto;
+    }
+    .aligncenter{
+      margin: 0 auto;
+    }
+
+  }
+}

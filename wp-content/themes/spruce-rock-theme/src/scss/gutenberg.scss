@@ -1,0 +1,62 @@
+@use 'modulesList' as *;
+
+.wp-block{
+  max-width: none;
+  margin: 0;
+  --block-name: attr(aria-label);
+}
+.wp-block-post-title{
+  max-width: 1352px;
+  box-sizing: content-box;
+  padding: 20px 4.654%;
+  // background: #F3F3ED;
+  border-bottom: 1px solid #E0DFE4;
+  &::before{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    content: 'Page title';
+    letter-spacing: 0.04em;
+    display: block;
+  }
+}
+.acf-block-component.acf-block-body .acf-block-fields{
+  border: 20px solid #f0f0f0;
+
+  &::before{
+    background: #f0f0f0;
+    font-weight: bold;
+    color: black;
+    font-size: 120%;
+    display: block;
+    padding: 20px 0;
+    content: var(--block-name);
+  }
+}
+.wp-block-post-content::after{
+  background: #24222C;
+  margin: 16px;
+  border-radius: 24px;
+  padding: 80px;
+  height: 200px;
+  font-size: 60px;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6E6A7F;
+  text-transform: uppercase;
+  font-weight: 700;
+  content: 'Footer';
+}
+.editor-styles-wrapper{
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.acf-block-preview{
+  @include modulesList( true );
+}

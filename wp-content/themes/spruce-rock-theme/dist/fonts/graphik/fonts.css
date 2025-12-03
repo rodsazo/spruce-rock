@@ -1,0 +1,72 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2025 Schwartzco Inc.
+        License 2511-MSRSLY      
+*/
+
+@font-face {
+	font-family: 'Graphik XXCond';
+	src: url('GraphikXXCondensed-Semibold-Web.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	}
+
+.GraphikXXCondensed-Semibold-Web {
+	font-family: 'Graphik XXCond';
+	font-weight: 600;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-Regular-Web.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	}
+
+.Graphik-Regular-Web {
+	font-family: 'Graphik Web';
+	font-weight: 400;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-RegularItalic-Web.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	}
+
+.Graphik-RegularItalic-Web {
+	font-family: 'Graphik Web';
+	font-weight: 400;
+	font-style: italic;
+	}
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-Medium-Web.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	}
+
+.Graphik-Medium-Web {
+	font-family: 'Graphik Web';
+	font-weight: 500;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'Graphik Web';
+	src: url('Graphik-MediumItalic-Web.woff2') format('woff2');
+	font-weight: 500;
+	font-style: italic;
+	}
+
+.Graphik-MediumItalic-Web {
+	font-family: 'Graphik Web';
+	font-weight: 500;
+	font-style: italic;
+	}

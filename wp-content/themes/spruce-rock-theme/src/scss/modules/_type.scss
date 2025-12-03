@@ -1,0 +1,70 @@
+@use "abstracts" as *;
+
+@at-root :root{
+  --t-trim-size-t: -0.44em;
+  --t-trim-size-b: -0.44em;
+}
+:root{
+  --hoverlink-color: #{$color-purple};
+}
+
+@mixin type{
+
+  .f-semibold{ font-weight: 600; }
+  .f-medium{ font-weight: 500; }
+
+  .t-trim{ margin-top: var(--t-trim-size-t); margin-bottom: var(--t-trim-size-b); }
+  .t-center{ text-align: center; }
+  .t-uppercase{ text-transform: uppercase; }
+
+  .t-caption{ @include t-caption; }
+  .t-large{ @include t-large }
+  .t-small{ @include t-small }
+
+  .t-16-b{ @include t-16-b }
+  .t-16{ @include t-16 }
+  .t-18{ @include t-18 }
+  .t-24{ @include t-24 }
+  .t-32{ @include t-32 }
+  .t-40{ @include t-40 }
+  .t-80{ @include t-80 }
+  .t-96{ @include t-96 }
+  .t-112{ @include t-112 }
+  .t-124{ @include t-124 }
+
+
+  .t-gradient{
+    background: var(--Gradient-Brand, linear-gradient(220deg, #CE2314 -0.83%, #C02A79 32.26%, #834895 66.35%, #4D9FBD 90.43%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .t-hoverlink{
+    &:hover{
+      color: var(--hoverlink-color);
+    }
+
+    svg{
+      width: 1em;
+      height: 1em;
+      vertical-align: baseline;
+      position: relative;
+      top: 0.12em;
+    }
+  }
+
+  .t-smallmono{
+    @include f_graphik;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .c-900{ color: $color-900; }
+  .c-100{ color: $color-100;}
+  .c-50{ color: $color-50;}
+  .c-purple{ color: $color-purple;}
+  .c-gray{ color: $color-gray;}
+  .c-yellow{ color: $color-yellow;}
+  .c-pastel-teal{ color: $color-pastel-teal;}
+}

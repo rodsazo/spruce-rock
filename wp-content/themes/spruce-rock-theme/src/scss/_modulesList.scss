@@ -1,0 +1,18 @@
+@use 'modules' as *;
+
+@mixin modulesList( $is_gutenberg : false ){
+  @include reset( $is_gutenberg );
+  @include base( $is_gutenberg );
+  @include intersect( $is_gutenberg );
+  @include btn;
+  @include type;
+  @include gcBlock;
+  @include spacing;
+  @include flow;
+  @include stickyHeader;
+  @include layout;
+  @include wysiwyg;
+  @include barmenu;
+
+  @include home-hero;
+}

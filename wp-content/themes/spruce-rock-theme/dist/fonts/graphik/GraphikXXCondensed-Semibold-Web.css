@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Graphik XXCond Web';
+	src: url('GraphikXXCondensed-Semibold-Web.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	}
+
+.GraphikXXCondensed-Semibold-Web {
+	font-family: 'Graphik XXCond Web';
+	font-weight: 600;
+	font-style: normal;
+	}

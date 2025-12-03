@@ -1,0 +1,36 @@
+@use "abstracts" as *;
+
+/* [Desktop size] [Mobile size] */
+$sizes :
+  40 32,
+  64 48,
+  80 64,
+  96 72,
+  120 96;
+
+:root{
+  @each $size, $responsive in $sizes {
+    --spacing-#{$size}: #{$size * 1px};
+  }
+
+  @media screen and (max-width: 600px){
+    @each $size, $responsive in $sizes {
+      --spacing-#{$size}: #{$responsive * 1px};
+    }
+  }
+}
+
+@mixin spacing{
+  .spacing{
+    @each $size, $responsive in $sizes {
+      &--top-#{$size}{ margin-top: var(--spacing-#{$size}); }
+      &--bottom-#{$size}{ margin-bottom: var(--spacing-#{$size}); }
+    }
+  }
+  .inside-spacing{
+    @each $size, $responsive in $sizes {
+      &--top-#{$size}{ padding-top: var(--spacing-#{$size}); }
+      &--bottom-#{$size}{ padding-bottom: var(--spacing-#{$size}); }
+    }
+  }
+}

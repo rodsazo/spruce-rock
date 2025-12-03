@@ -1,0 +1,13 @@
+@use "abstracts" as *;
+
+@mixin btn{
+    .btn{
+        
+    }
+    @media screen and (max-width: 650px ) {
+        .btn{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

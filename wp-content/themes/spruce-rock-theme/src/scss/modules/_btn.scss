@@ -2,12 +2,67 @@
 
 @mixin btn{
     .btn{
-        
+        box-sizing: border-box;
+        border-radius: 999px;
+        padding: 12px 24px;
+        width: fit-content;
+        font-weight: 700;
+        transition: background-color 0.3s ease, border-radius 0.3s ease;
+        &--primary{
+            white-space: nowrap;
+            background-color: $color-yellow;
+            color: $color-800 !important;
+            /*&:hover {
+                border-radius: 22px;
+                background-color: $color-sky80;
+            }*/
+        }
+
+        &--secondary{
+            white-space: nowrap;
+            background-color: $color-900;
+            color: white !important;
+            /*&:hover { 
+                border-radius: 99px;
+                background-color: $color-900;
+            }*/
+        }
+        &--tertiary{
+            white-space: nowrap;
+            background-color: $color-green;
+            color: white !important;
+            /*&:hover {
+                border-radius: 99px;
+                background-color: white;
+                color: $color-obsidian650 !important;
+                border: 2px solid  $color-obsidian650;
+            }*/
+        }
+        /*&--link{
+            border-radius: 0;
+            padding: 8px 0 10px 0;
+            white-space: nowrap;
+            background-color: transparent;
+            border-bottom: 2px solid  $color-sky;
+        }*/
+        &__group{
+            display: flex;
+            gap: 12px;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 2px 0;
+            &--centered{
+                justify-content: center;
+            }
+        }
     }
     @media screen and (max-width: 650px ) {
         .btn{
             width: 100%;
             text-align: center;
+            &__group{
+                flex-direction: column;
+            }
         }
     }
 }

@@ -154,7 +154,7 @@ function the_buttons($button_repeater,$centered = false){
 function the_button($link,$style = 'primary'){
     if(empty($link['url'])){return;}
     ?>
-    <a href="<?= $link['url']?>" class="btn btn--<?= $style?> t-16 t-trim c-800">            
+    <a href="<?= $link['url']?>" class="btn btn--<?= $style?> t-16 t-trim">            
         <?= $link['title']?>
     </a>
     <?php

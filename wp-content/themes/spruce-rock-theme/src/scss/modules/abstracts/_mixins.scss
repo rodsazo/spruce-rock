@@ -106,7 +106,19 @@ $small-fonts-breakpoint : 768px;
   --t-trim-size-t: -0.125em;
   --t-trim-size-b: -0.056em;
   @media screen and (max-width: $small-fonts-breakpoint){
-    font-size: 96px;
+    font-size: 72px !important;
+  }
+}
+
+@mixin t-96-56{
+  @include f_graphik;
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  --t-trim-size-t: -0.125em;
+  --t-trim-size-b: -0.056em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 56px !important;
   }
 }
 

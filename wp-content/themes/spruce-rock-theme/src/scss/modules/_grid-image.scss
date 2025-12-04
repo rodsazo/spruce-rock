@@ -1,0 +1,38 @@
+@use 'abstracts' as *;
+@mixin grid-image{
+    .grid-image{
+        &__content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            &--top{
+                align-items: flex-start;
+            }
+        }
+        &__left{
+            height: 492px;
+            order: 0;
+            &--change{
+                order: 1;
+            }
+            &-image{
+                width: 100%;  /* desde mitad de la pantalla hasta el borde derecho */
+                height: 100%;
+                object-fit: cover;        /* mantiene proporción */
+                object-position: center;  /* centrada */
+                aspect-ratio: 3 / 2;      /* relación 3:2 */
+            }
+        }
+        @media screen and (max-width: 930px){
+            &__content{
+                grid-template-columns: 1fr;
+            }
+            &__left{
+                height: 52.90vw;
+                min-height: 294px;
+            }
+        }
+    }
+    
+}

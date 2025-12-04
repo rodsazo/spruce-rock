@@ -28,7 +28,7 @@
             "label": "Title",
             "name": "grid_image_title",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,10 +39,10 @@
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
+            "allow_in_bindings": 1,
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": "br"
         },
         {
             "key": "field_6931b727362a9",
@@ -89,7 +89,7 @@
         },
         {
             "key": "field_6931c5d0ec460",
-            "label": "Image Position",
+            "label": "Text Position",
             "name": "grid_image_position",
             "aria-label": "",
             "type": "button_group",
@@ -105,7 +105,7 @@
                 "left": "Left",
                 "right": "Right"
             },
-            "default_value": "left",
+            "default_value": "right",
             "return_format": "value",
             "allow_null": 0,
             "allow_in_bindings": 1,
@@ -156,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764883310
+    "modified": 1764887629
 }

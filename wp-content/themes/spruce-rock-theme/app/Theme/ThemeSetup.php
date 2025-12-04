@@ -85,7 +85,7 @@ class ThemeSetup
     }
 
     public function mi_script_menu() {
-        wp_enqueue_script('mi-menu', get_theme_file_uri('/assets/js/menu.js'), array('jquery'), null, true);
+        //wp_enqueue_script('mi-menu', get_theme_file_uri('/assets/js/menu.js'), array('jquery'), null, true);
 
         wp_localize_script('mi-menu', 'WP_DATA', array(
             'isFrontPage' => is_front_page()

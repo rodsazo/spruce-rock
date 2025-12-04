@@ -118,7 +118,7 @@ $small-fonts-breakpoint : 768px;
   --t-trim-size-t: -0.077em;
   --t-trim-size-b: -0.007em;
   @media screen and (max-width: $small-fonts-breakpoint){
-    font-size: 112px;
+    font-size: 72px !important;
   }
 }
 

@@ -10,5 +10,6 @@ class ThemeBlocks
         $blocks->addBlock( 'home-hero', 'Main Hero', '', ['banner', 'title']);
         $blocks->addBlock( 'stats', 'Stats', '', ['stats']);
         $blocks->addBlock( 'grid-image', 'Grid Image', '', ['grid','image']);
+        $blocks->addBlock( 'grid-icons', 'Grid with Icons', '', ['grid','icons']);
     }
 }

@@ -24,10 +24,15 @@
                 aspect-ratio: 3 / 2;      /* relación 3:2 */
             }
         }
-        &__right-title .last-text {
-            text-decoration: underline;
-            text-decoration-color: $color-yellow; /* el color que quieras */
-            text-underline-offset: 2px;
+        &__right{
+            &-eyebrow{
+                font-weight: 500;
+            }
+            &-title .last-text {
+                text-decoration: underline;
+                text-decoration-color: $color-yellow; /* el color que quieras */
+                text-underline-offset: 2px;
+            }
         }
         @media screen and (max-width: 930px){
             &__content{

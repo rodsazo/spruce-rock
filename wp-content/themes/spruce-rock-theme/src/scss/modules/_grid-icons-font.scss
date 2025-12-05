@@ -1,0 +1,104 @@
+@use 'abstracts' as *;
+:root{
+    --grid-columns: 3;
+}
+@mixin grid-icons-font{
+    .grid-icons-font{
+        &__eyebrow{
+            font-weight: 500;
+        }
+        &__title{
+            display:grid;
+            grid-template-columns: repeat(var(--grid-columns), 1fr);
+            font-weight: 600;
+        }
+        &__bottom-40{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            &::after {
+                content: "";
+                flex-grow: 1;        /* ocupa todo el espacio disponible */
+                height: 1px;         /* grosor de la línea */
+                background-color: $color-yellow; /* usa el mismo color del texto */
+            }
+        }
+        &__subcontent{
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(var(--grid-columns), 1fr);
+            gap: 40px;
+        }
+        &__grid{
+            min-height: 322px;
+            padding: 40px;
+            justify-content: center;
+            background: $color-pastel-teal; /* el fondo que tú quieras */
+            &--shape-1 { @include clip-1; }
+            &--shape-2 { @include clip-2; }
+            &--shape-3 { @include clip-3; }
+            &-icons{
+                width: 120px;
+                height: 120px;
+                margin-bottom: 16px;
+            }
+            &-icon{
+                width: 120px;
+                height: 120px;
+            }
+            &-title{
+                font-weight: 500;
+            }
+        }
+        @media screen and (max-width: 1030px){
+            --grid-columns: 2;
+        }
+        @media screen and (max-width: 700px){
+            --grid-columns: 1;
+            &__grid{
+                min-height: 282px;
+                &-icons{
+                    width: 80px;
+                    height: 80px;
+                }
+                &-icon{
+                    width: 80px;  
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+@mixin clip-1 {
+  clip-path: polygon(
+    24px 0,
+    100% 0,
+    100% 100%,
+    100% 100%,
+    0 100%,
+    0 24px
+  );
+}
+
+@mixin clip-2 {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    24px 100%,
+    0 calc(100% - 24px),
+    0 24px
+  );
+}
+
+@mixin clip-3 {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 24px) 0,
+    100% 24px,
+    100% 100%,
+    0 100%
+  );
+}

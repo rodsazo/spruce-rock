@@ -11,5 +11,6 @@ class ThemeBlocks
         $blocks->addBlock( 'stats', 'Stats', '', ['stats']);
         $blocks->addBlock( 'grid-image', 'Grid Image', '', ['grid','image']);
         $blocks->addBlock( 'grid-icons', 'Grid with Icons', '', ['grid','icons']);
+        $blocks->addBlock( 'grid-icons-font', 'Grid Icons with Font', '', ['grid','icons','font']);
     }
 }

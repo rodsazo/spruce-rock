@@ -26,6 +26,7 @@
   .t-24{ @include t-24 }
   .t-32{ @include t-32 }
   .t-40{ @include t-40 }
+  .t-40_2{ @include t-40_2 }
   .t-80{ @include t-80 }
   .t-96{ @include t-96 }
   .t-96-56{ @include t-96-56 }
@@ -62,7 +63,11 @@
 
   .c-900{ color: $color-900; }
   .c-800{ color: $color-800; }
-  .c-100{ color: $color-100;}
+  .c-750{ color: $color-750;}
+  .c-700{ color: $color-700; }
+  .c-100{ color: $color-100; }
+  .c-50{ color: $color-50;}
+
   .c-50{ color: $color-50;}
   .c-purple{ color: $color-purple;}
   .c-gray{ color: $color-gray;}

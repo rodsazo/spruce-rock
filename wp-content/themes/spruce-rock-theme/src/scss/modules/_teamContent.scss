@@ -1,0 +1,89 @@
+@use 'abstracts' as *;
+@mixin teamContent{
+    .teamContent{
+        &--header{
+            background: $color-900;
+        }
+        &__title{
+            padding: 160px 0;
+            width: 888px;
+            font-weight: 600;
+            color: white;
+        }
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;  
+            margin-bottom: 128px;  
+        }
+        &__imageContent{
+            cursor: pointer;
+            margin-bottom: 29px;   
+            height: 424px;  
+            width: 424px;  
+        }
+        &__image{
+            display: block;
+            background: $color-pastel-teal;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: all 0.2s ease;
+            &:hover{
+                background: white;
+            }
+        }
+        &__textContentName{
+            cursor: pointer;
+            font-weight: 500;
+        }
+        &__textContentRol{
+            display: flex;
+            align-items: center;   // centra verticalmente
+            gap: 8px;              // separa el icono del texto
+            position: relative;
+            &::before{
+                content: "";
+                background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0L14 7L7 14L0 7L7 0Z" fill="%23CEDC00"/></svg>');
+                display: inline-block; 
+                width: 14px;
+                height: 14px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+    @media screen and (max-width: 1352px ) {
+        .teamContent__imageContent{  
+            width: 100%;  
+            height: 30vw; 
+        }
+    }
+    @media screen and (max-width: 980px ) {
+        .teamContent{
+            &__container{
+                grid-template-columns: 1fr 1fr;
+            }
+            &__imageContent{   
+                height: 38vw; 
+            }
+        }
+    }
+    @media screen and (max-width: 954px ) {
+        .teamContent__imageContent{  
+            width: 100%;  
+        }
+    }
+    @media screen and (max-width: 530px ) {
+        .teamContent{
+            &__container{
+                grid-template-columns: 1fr;
+            }
+            &__imageContent{  
+                height: 78vw; 
+            }
+        }
+    }
+}

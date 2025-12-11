@@ -27,7 +27,7 @@ class ThemePostTypes
         $podcast->autoLabels('Episode', 'Episodes');
         $podcast->l_menu_name = 'Podcast';
         $podcast->menu_icon = 'dashicons-microphone';
-        $podcast->supports = ['title', 'editor', 'thumbnail'];
+        $podcast->supports = ['title', 'editor', 'thumbnail'];*/
 
         $teamblock = new PostType( self::TEAM, 'team');
         $teamblock->autoLabels('Member', 'Members');
@@ -35,7 +35,7 @@ class ThemePostTypes
         $teamblock->menu_icon = 'dashicons-groups';
         $teamblock->supports = ['title', 'thumbnail'];
 
-        $community = new PostType( self::COMMUNITY, 'communities');
+        /*$community = new PostType( self::COMMUNITY, 'communities');
         $community->autoLabels('Community Group', 'Communities');
         $community->l_menu_name = 'Communities';
         $community->menu_icon = 'dashicons-buddicons-buddypress-logo';

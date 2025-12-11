@@ -8,7 +8,11 @@
     }
     &--bg-white{
       background: white;
+      & .bottom-40::after {
+        background-color: $color-yellow !important; /* usa el mismo color del texto */
+      }
     }
+    
     &--bg-black{
       background: $color-900;
       color: white;

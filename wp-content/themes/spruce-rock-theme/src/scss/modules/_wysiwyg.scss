@@ -44,7 +44,7 @@
     }
 
     p, h2, h3, h4, ul, ol {
-      margin: var(--t-trim-size) 0;
+      @include t_18;
     }
 
     hr{
@@ -59,7 +59,8 @@
 
 
     :is(p,h2,h3,h4,ul,ol){
-      padding: 0.5em 0 0.125em;
+      margin-top: -0.39em; 
+      margin-bottom: -0.385em;
       :first-child{
         padding-top: 0 !important;
       }

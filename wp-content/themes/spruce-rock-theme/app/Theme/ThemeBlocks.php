@@ -12,5 +12,6 @@ class ThemeBlocks
         $blocks->addBlock( 'grid-image', 'Grid Image', '', ['grid','image']);
         $blocks->addBlock( 'grid-icons', 'Grid with Icons', '', ['grid','icons']);
         $blocks->addBlock( 'grid-icons-font', 'Grid Icons with Font', '', ['grid','icons','font']);
+        $blocks->addBlock( 'team', 'Team Grid', 'Meet Team', ['team']);
     }
 }

@@ -85,6 +85,16 @@ $small-fonts-breakpoint : 768px;
     font-size: 24px !important;
   }
 }
+@mixin t-40_2{
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  --t-trim-size-t: -0.35em;
+  --t-trim-size-b: -0.385em;
+  @media screen and (max-width: $small-fonts-breakpoint){
+    font-size: 24px !important;
+  }
+}
 
 @mixin t-80{
   @include f_graphik;

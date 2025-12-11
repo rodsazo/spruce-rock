@@ -24,7 +24,14 @@ class BlockCategory
             'keywords' => $keywords,
             'render_callback' => [$this, 'renderBlock'],
             'supports' => [
-                'jsx' => true
+                'jsx' => true,
+                'innerBlocks' => [
+                    'allowedBlocks' => [
+                        'core/paragraph',
+                        'core/image',
+                        'acf/bloque-hijo'
+                    ], // permite todos los bloques
+                ],
             ],
             'category' => $this->slug,
             'example' => [

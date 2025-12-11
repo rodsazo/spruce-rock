@@ -30,6 +30,10 @@ $barmenu-breakpoint : 1080px;
     .barmenu{
         z-index: 2;
         background: white;
+        li.current-menu-item > a{
+            border-bottom: 2px solid $color-yellow;  // la línea
+            width: fit-content;  
+        }
         &__top{
             height: var(--barmenu-height);
         }

@@ -27,4 +27,4 @@
 <?php tracking_codes('tracking_after_body') ?>
 <?php
 get_template_part('parts/barmenu');
-//get_template_part('parts/mob-menu');
+get_template_part('parts/mob-menu');

@@ -27,7 +27,7 @@ if( $image_id ) {
                     </div>
                     <div class="home-hero__content-left-link">
                         <?php if(isset($home_hero_link['url'])) : ?>
-                        <a class="btn-menu" href="<?= $home_hero_link['url'] ?: '#'; ?>" target="<?= $home_hero_link['target'] ?: '_self'; ?>">
+                        <a class="btn-first-button" href="<?= $home_hero_link['url'] ?: '#'; ?>" target="<?= $home_hero_link['target'] ?: '_self'; ?>">
                             <?= $home_hero_link['title']; ?>
                         </a>
                         <?php endif ?>

@@ -9,7 +9,7 @@ $footer_social_media = get_field('footer_social_media', 'options');
         <div class="site-footer__top-content">
             <h2 class="t-96 t-trim t-uppercase"><?=$footer_title?></h2>
             <?php if(isset($footer_link['url'])) : ?>
-            <a class="btn-menu" href="<?= $footer_link['url'] ?: '#'; ?>" target="<?= $footer_link['target'] ?: '_self'; ?>">
+            <a class="btn-first-button" href="<?= $footer_link['url'] ?: '#'; ?>" target="<?= $footer_link['target'] ?: '_self'; ?>">
                 <?= $footer_link['title']; ?>
             </a>
             <?php endif ?>

@@ -235,4 +235,3 @@ function sanitize_phone( $phone ) {
 
     return $cleaned;
 }
-

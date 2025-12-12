@@ -1,0 +1,70 @@
+@use 'abstracts' as *;
+@mixin last-blogs{
+    .last-blogs{
+        &--header{
+            background: $color-900;
+        }
+        &__header{
+            padding: 160px 0;
+            width: 888px;
+            color: white;
+        }
+        &__title{
+            font-weight: 600;            
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            margin: 96px 0;
+            &Body{                
+                border-top: 1px solid $color-100;
+                padding: 24px 0;
+                display: grid;
+                grid-template-columns: 68.64fr 31.36fr;
+                gap: 156px;
+                align-items: center;
+            }
+        }
+        &__textContent-content{
+            font-weight: 500; 
+        }
+        &__imageContent{ 
+            height: 239px;  
+            min-width: 424px;  
+        }
+        &__image{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        @media screen and (max-width: 1300px){
+            &__containerBody{
+                gap: 5vw;
+            }
+        }
+        @media screen and (max-width: 1000px){
+            &__imageContent{ 
+                min-width: 42.4vw;  
+            }
+        }
+        @media screen and (max-width: 888px){
+            &__header{
+                padding: 18.02vw 0;
+                width: 100%;
+            }
+            &__container{
+                margin: 10.81vw 0;
+            }
+        }
+        @media screen and (max-width: 700px){
+            &__containerBody{
+                grid-template-columns: 1fr;
+            }
+            &__imageContent{ 
+                min-width: 100%;  
+            }
+        }
+    }
+}

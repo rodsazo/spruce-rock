@@ -32,7 +32,7 @@
         &__grid{
             min-height: 322px;
             padding: 40px;
-            justify-content: center;
+            justify-content: flex-start;
             background: $color-pastel-teal; /* el fondo que tú quieras */
             &--shape-1 { @include clip-1; }
             &--shape-2 { @include clip-2; }

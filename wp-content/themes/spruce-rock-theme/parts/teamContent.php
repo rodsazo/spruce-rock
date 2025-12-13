@@ -1,14 +1,6 @@
 <?php
-$team_main_title = get_field('team_main_title');
 $positions = get_field('team_position');
 ?>
-<section class="teamContent teamContent--header">
-    <div class="container">
-        <h1 class="teamContent__title t-124 t-trim t-uppercase">
-            <?=$team_main_title?>
-        </h1>
-    </div>
-</section>
  <InnerBlocks />
  <section class="teamContent">
     <div class="container">

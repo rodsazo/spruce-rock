@@ -1,6 +1,4 @@
 <?php
-$blog_title = get_field('blog_title');
-$blog_text = get_field('blog_text');
 $blog_list = get_field('blog_list');
 global $post;
 ?>

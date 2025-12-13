@@ -1,15 +1,6 @@
 @use 'abstracts' as *;
 @mixin teamContent{
     .teamContent{
-        &--header{
-            background: $color-900;
-        }
-        &__title{
-            padding: 160px 0;
-            width: 888px;
-            font-weight: 600;
-            color: white;
-        }
         &__container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;

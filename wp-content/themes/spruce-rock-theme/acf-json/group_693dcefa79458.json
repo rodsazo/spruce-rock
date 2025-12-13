@@ -1,11 +1,11 @@
 {
-    "key": "group_693a469ce88e5",
-    "title": "PostType : Team",
+    "key": "group_693dcefa79458",
+    "title": "Block: Page Hero",
     "fields": [
         {
-            "key": "field_693a469d28512",
-            "label": "Rol",
-            "name": "team_rol",
+            "key": "field_693a54c493b2b",
+            "label": "Main title",
+            "name": "page_hero_main_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -24,11 +24,11 @@
             "append": ""
         },
         {
-            "key": "field_693a470d28513",
-            "label": "Bio",
-            "name": "team_bio",
+            "key": "field_693c33ff0a834",
+            "label": "Text",
+            "name": "page_hero_text",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -38,47 +38,30 @@
                 "id": ""
             },
             "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_693a472a28514",
-            "label": "Linkedin URL",
-            "name": "team_linkedin",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "team"
+                "value": "acf\/page-hero"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -1,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765579911
+    "modified": 1765659124
 }

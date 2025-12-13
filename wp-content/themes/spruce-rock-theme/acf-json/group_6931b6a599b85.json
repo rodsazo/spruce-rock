@@ -1,6 +1,6 @@
 {
     "key": "group_6931b6a599b85",
-    "title": "Block: Grid Image",
+    "title": "Block: Media And Text",
     "fields": [
         {
             "key": "field_6931b6a6362a7",
@@ -156,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764887629
+    "modified": 1765578553
 }

@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+@mixin page-hero{
+    .page-hero{
+        background: $color-900;
+        &__header{
+            padding: 160px 0;
+            width: 888px;
+            color: white;
+        }
+        &__title{
+            font-weight: 600;            
+        }
+    }
+}

@@ -11,7 +11,7 @@ $positions = get_field('team_position');
                     $teamRol = get_field('team_rol',$position->ID);
                     $imageUrl = wp_get_attachment_url($imageId);
             ?>
-            <div class="teamContent__containerBody">
+            <div class="teamContent__containerBody | intersect fadeIn">
                 <div class="teamContent__imageContent | btnOpen" data-id="<?= $index; ?>" aria-label="Open">
                     <img class="teamContent__image" src="<?= esc_url($imageUrl); ?>">
                 </div>

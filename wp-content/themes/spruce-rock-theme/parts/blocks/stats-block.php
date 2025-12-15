@@ -7,10 +7,10 @@
             $text = get_sub_field('stats_text');
             ?>
             <div class="stats__content flow c-900">
-                <div class="stats__title t-112 t-trim">
+                <div class="stats__title t-112 t-trim | intersect fadeIn">
                     <?php echo $title; ?>
                 </div>
-                <div class="stats__text t-18 t-trim">
+                <div class="stats__text t-18 t-trim | intersect fadeIn">
                     <?php echo $text; ?>
                 </div>
             </div>

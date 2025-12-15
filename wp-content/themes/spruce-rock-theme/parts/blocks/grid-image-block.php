@@ -19,37 +19,37 @@ if( $image_id ) {
 <section class="grid-image">
     <div class="container">
         <?php if($grid_image_eyebrow_text && !$image_url): ?>
-        <div class="grid-image__right-eyebrow bottom-40 t-caption t-trim">
+        <div class="grid-image__right-eyebrow bottom-40 t-caption t-trim  | intersect fadeIn">
             <?=$grid_image_eyebrow_text?>
         </div>
         <?php endif; ?>
-        <div class="grid-image__content <?= (!$image_url)?'grid-image__content--top':'' ?>">
+        <div class="grid-image__content <?= (!$image_url)?'grid-image__content--top':'' ?>  | intersect fadeIn">
             <?php if($image_url): ?>
-            <div class="grid-image__left <?= ($grid_image_position == 'right')?'':'grid-image__left--change' ?>">
+            <div class="grid-image__left <?= ($grid_image_position == 'right')?'':'grid-image__left--change' ?>  | intersect fadeIn">
                 <img class="grid-image__left-image" src="<?= esc_url($image_url); ?>">
             </div>
             <?php else: ?>
-            <div class="grid-image__right-text <?= ($grid_image_position == 'right')?'':'grid-image__left--change' ?> flow t-18 t-trim">
+            <div class="grid-image__right-text <?= ($grid_image_position == 'right')?'':'grid-image__left--change' ?> flow t-18 t-trim | intersect fadeIn">
                 <?=$grid_image_text?>
             </div>
             <?php endif; ?>
             <div class="grid-image__right flow">
                 <?php if($grid_image_eyebrow_text && $image_url): ?>
-                <div class="grid-image__right-eyebrow t-caption t-trim">
+                <div class="grid-image__right-eyebrow t-caption t-trim | intersect fadeIn">
                     <?=$grid_image_eyebrow_text?>
                 </div>
                 <?php endif; ?>
-                <h2 class="grid-image__right-title <?= ($grid_image_eyebrow_text && $image_url)?'t-96':'t-96-56' ?> t-trim t-uppercase">
+                <h2 class="grid-image__right-title <?= ($grid_image_eyebrow_text && $image_url)?'t-96':'t-96-56' ?> t-trim t-uppercase | intersect fadeIn">
                     <?=$grid_image_title?>
                 </h2>
                 <?php if($image_url): ?>
-                <div class="grid-image__right-text flow t-18 t-trim">
+                <div class="grid-image__right-text flow t-18 t-trim | intersect fadeIn">
                     <?=$grid_image_text?>
                 </div>
                 <?php endif; ?>
                 <?php if($template_buttons){
-                    the_buttons($template_buttons); 
-                }?> 
+                    the_buttons($template_buttons);
+                }?>
             </div>
         </div>
     </div>

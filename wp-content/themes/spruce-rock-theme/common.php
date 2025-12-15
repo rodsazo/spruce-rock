@@ -51,7 +51,7 @@ function custom_tinymce_font_classes( $settings ) {
 }
 add_filter( 'tiny_mce_before_init', 'custom_tinymce_font_classes' );
 function add_custom_fontsize_menu( $buttons ) {
-    array_push( $buttons, 'styleselect' );  
+    array_push( $buttons, 'styleselect' );
     return $buttons;
 }
 add_filter( 'mce_buttons', 'add_custom_fontsize_menu' );
@@ -135,16 +135,16 @@ function disable_embeds_filter_oembed_response_data_( $data ) {
 }
 
 /*
- * Create the button group 
+ * Create the button group
  */
 
 function the_buttons($button_repeater,$centered = false){
     ?>
-    <div class="btn__group <?= $centered?'btn__group--centered':''?>">
+    <div class="btn__group <?= $centered?'btn__group--centered':''?> | intersect fadeIn">
     <?php
     foreach($button_repeater as $button_data){
         $link = $button_data['link']?? [];
-        $style = $button_data['style']??'primary'; 
+        $style = $button_data['style']??'primary';
         the_button($link,$style);
     }
     ?>
@@ -154,7 +154,7 @@ function the_buttons($button_repeater,$centered = false){
 function the_button($link,$style = 'primary'){
     if(empty($link['url'])){return;}
     ?>
-    <a href="<?= $link['url']?>" class="btn btn--<?= $style?> t-16 t-trim">            
+    <a href="<?= $link['url']?>" class="btn btn--<?= $style?> t-16 t-trim">
         <?= $link['title']?>
     </a>
     <?php

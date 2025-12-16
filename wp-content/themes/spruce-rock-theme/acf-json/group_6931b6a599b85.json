@@ -45,6 +45,30 @@
             "new_lines": "br"
         },
         {
+            "key": "field_6940e74c1ab1f",
+            "label": "Title font size",
+            "name": "title_font_size",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "large": "Large",
+                "medium": "Medium"
+            },
+            "default_value": "large",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_6931b727362a9",
             "label": "Text",
             "name": "grid_image_text",
@@ -156,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1765578553
+    "modified": 1765861218
 }

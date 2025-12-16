@@ -1,6 +1,7 @@
 <?php
 $grid_image_eyebrow_text = get_field('grid_image_eyebrow_text');
 $grid_image_title = get_field('grid_image_title');
+$title_font_size = get_field('title_font_size') ?: 'large';
 $grid_image_text = get_field('grid_image_text');
 $grid_image_position = get_field('grid_image_position');
 $template_buttons = get_field('template_buttons');
@@ -15,6 +16,15 @@ if( $image_id ) {
         $grid_image_title
     );
 }
+
+$heading_font_size         = 't-96';
+$heading_font_size_compact = 't-96-56';
+
+if( $title_font_size == 'medium' ) {
+    $heading_font_size         = 't-80';
+    $heading_font_size_compact = 't-80';
+}
+
 ?>
 <section class="grid-image">
     <div class="container">
@@ -39,7 +49,7 @@ if( $image_id ) {
                     <?=$grid_image_eyebrow_text?>
                 </div>
                 <?php endif; ?>
-                <h2 class="grid-image__right-title <?= ($grid_image_eyebrow_text && $image_url)?'t-96':'t-96-56' ?> t-trim t-uppercase | intersect fadeIn">
+                <h2 class="grid-image__right-title <?= ($grid_image_eyebrow_text && $image_url)?$heading_font_size:$heading_font_size_compact ?> t-trim t-uppercase | intersect fadeIn">
                     <?=$grid_image_title?>
                 </h2>
                 <?php if($image_url): ?>

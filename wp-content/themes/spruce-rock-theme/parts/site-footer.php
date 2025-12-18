@@ -7,9 +7,9 @@ $footer_social_media = get_field('footer_social_media', 'options');
 <section class="site-footer__top">
     <div class="container">
         <div class="site-footer__top-content">
-            <h2 class="t-96 t-trim t-uppercase"><?=$footer_title?></h2>
+            <h2 class="t-96 t-trim t-uppercase | intersect fadeIn"><?=$footer_title?></h2>
             <?php if(isset($footer_link['url'])) : ?>
-            <a class="btn-first-button" href="<?= $footer_link['url'] ?: '#'; ?>" target="<?= $footer_link['target'] ?: '_self'; ?>">
+            <a class="btn-first-button | intersect fadeIn" href="<?= $footer_link['url'] ?: '#'; ?>" target="<?= $footer_link['target'] ?: '_self'; ?>">
                 <?= $footer_link['title']; ?>
             </a>
             <?php endif ?>
@@ -46,13 +46,13 @@ $footer_social_media = get_field('footer_social_media', 'options');
             <div class="site-footer__bottom-font-icon">
                 <div class="site-footer__bottom-font-icon-links t-16 t-trim">
                     <div class="site-footer__bottom-font-icon-link">© 2025 Spruce Rock Capital</div>
-                    <?php if(empty($footer_social_media)){return;} ?> 
-                    <?php 
+                    <?php if(empty($footer_social_media)){return;} ?>
+                    <?php
                     $number = 1;
-                    foreach($footer_social_media as $social_media) : 
+                    foreach($footer_social_media as $social_media) :
                     ?>
                     <a class="site-footer__bottom-font-icon-link" href="<?= isset($social_media['footer_links']['url']) ? $social_media['footer_links']['url'] : '#' ?>"><?=$social_media['footer_links']['title']?></a>
-                    <?php endforeach; ?>                    
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

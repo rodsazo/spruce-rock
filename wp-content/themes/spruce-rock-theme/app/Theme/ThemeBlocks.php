@@ -15,5 +15,6 @@ class ThemeBlocks
         $blocks->addBlock( 'team', 'Team Grid', 'Meet Team', ['team']);
         $blocks->addBlock( 'last-blogs', 'Latest posts', 'Latest posts', ['latest','posts']);
         $blocks->addBlock( 'page-hero', 'Page Hero', '', ['page', 'hero']);
+        $blocks->addBlock( 'simple-text', 'Simple Text Block', '', ['simple', 'text']);
     }
 }

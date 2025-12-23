@@ -51,7 +51,12 @@ $footer_social_media = get_field('footer_social_media', 'options');
                     $number = 1;
                     foreach($footer_social_media as $social_media) :
                     ?>
-                    <a class="site-footer__bottom-font-icon-link" href="<?= isset($social_media['footer_links']['url']) ? $social_media['footer_links']['url'] : '#' ?>"><?=$social_media['footer_links']['title']?></a>
+                    <a class="site-footer__bottom-font-icon-link"
+                       href="<?= isset($social_media['footer_links']['url']) ? $social_media['footer_links']['url'] : '#' ?>"
+                       target="<?php echo $social_media['footer_links']['target'] ?? '_self'; ?>"
+                    >
+                        <?=$social_media['footer_links']['title']?>
+                    </a>
                     <?php endforeach; ?>
                 </div>
             </div>

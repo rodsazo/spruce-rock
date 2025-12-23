@@ -5,7 +5,7 @@
             background: $color-yellow;
             &-content{
                 min-height: 349px;
-                padding-bottom: 40px;                
+                padding-bottom: 40px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -41,10 +41,10 @@
                         background-size: 13px 13px;     // tamaño del SVG
                         background-position: center;
                     }
-                } 
+                }
             }
         }
-        &__bottom{          
+        &__bottom{
             margin-top: -40px;
             min-height: 508px;
             background: $color-900;
@@ -56,12 +56,12 @@
                 100% 100%,
                 100% 100%,
                 0 100%,
-                0 40px      
+                0 40px
             );
             &-content{
                 min-height: 360px;
                 position: relative;
-            } 
+            }
             &-text{
                 width: 424px;
             }
@@ -71,24 +71,24 @@
                 position: relative;
                 bottom: 35px;
             }
-            &-font-icon{      
+            &-font-icon{
                 position: relative;
-                display: flex;                             
-                z-index: 1; 
+                display: flex;
+                z-index: 1;
                 justify-content: flex-end;
-                align-items: center;   
+                align-items: center;
                 &-links{
                     white-space: wrap;
                     display: flex;
-                    gap: 33px;   
-                    align-items: center; 
-                    overflow-x: clip; 
+                    gap: 33px;
+                    align-items: center;
+                    overflow-x: clip;
                 }
                 &-link{
                     white-space: nowrap;
                     position: relative;
                     overflow: visible;
-                    
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -97,12 +97,13 @@
                         height: 16px;
                         width: 1px;
                         background-color: $color-yellow;
-                    } 
+                    }
                     &.is-last-in-row::after {
                         display: none !important;
                     }
-                }     
+                }
                 &::before{
+                  pointer-events: none;
                     content: "";
                     background-image: url('data:image/svg+xml;utf8,<svg width="388" height="388" viewBox="0 0 388 388" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M387.296 194.003L354.049 227.847L217.75 91.5479V121.457L338.796 242.503L305.549 276.347L217.75 188.548V218.457L290.296 291.003L257.049 324.847L217.75 285.548V387.5H170.25V285.548L169.396 286.401L130.95 324.847L97.7031 291.003L170.104 218.604L170.25 218.457V188.548L169.396 189.401L82.4502 276.347L49.2031 242.503L170.104 121.604L170.25 121.457V91.5479L169.396 92.4014L33.9502 227.847L0.703125 194.003L194 0.707031L387.296 194.003Z" stroke="%23323851" stroke-width="0.4"/></svg>');
                     position: absolute;
